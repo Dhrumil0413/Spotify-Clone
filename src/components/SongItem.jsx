@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SongItem = ({image, name, desc, id}) => {
+export const SongItem = ({image, name, desc, id}) => {
   return (
     <div className='min-w-[180px] p-2 px-3 rounded cursor-pointer hover:bg-[#ffffff26]'>
         <img className='rounded' src={image} alt="" />
@@ -10,4 +10,4 @@ const SongItem = ({image, name, desc, id}) => {
   )
 }
 
-export default SongItem
+export default SongItem;
