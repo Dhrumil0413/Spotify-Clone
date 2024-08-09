@@ -42,6 +42,9 @@ import song1 from  './song1.mp3'
 import song2 from  './song2.mp3'
 import song3 from  './song3.mp3'
 
+// Another assets imported right from here.
+import loader from './loader.svg'
+
 export const assets = {
     bell_icon,
     home_icon,
@@ -66,7 +69,8 @@ export const assets = {
     arrow_left,
     arrow_right,
     spotify_logo,
-    clock_icon
+    clock_icon,
+    loader
 }
 
 export const albumsData = [

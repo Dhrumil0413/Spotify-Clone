@@ -3,14 +3,14 @@ import {Routes, Route, useLocation} from 'react-router-dom'
 import DisplayHome from './DisplayHome'
 import DisplayAlbum from './DisplayAlbum'
 import { albumsData } from '../assets/assets'
+import Loader from './Loader'
 
 export const Display = () => {
     const displayRef = useRef();
     const location = useLocation();
     const isAlbum = location.pathname.includes("album");
     const albumId = isAlbum ? location.pathname.slice(-1) : "";
-    const bgColor = albumsData[Number(albumId)].bgColor;
-    console.log(bgColor);
+    const bgColor = albumsData[Number(albumId)].bgColor;        
 
     useEffect(() => { 
         if (isAlbum) {
@@ -20,6 +20,9 @@ export const Display = () => {
             displayRef.current.style.background = '#121212';
         }
     })
+
+    // This line would be called when we will fetch songs data to it. 
+    // return <Loader title={"Loading Songs..."}/>
 
   return (
     <div ref={displayRef} className='w-[100%] m-2 px-6 pt-4 rounded text-white overflow-auto lg:w-[75%] lg:ml-0'>
@@ -31,4 +34,4 @@ export const Display = () => {
   )
 }
 
-export default Display
+export default Display;
